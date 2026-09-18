@@ -90,15 +90,15 @@ A multi-vendor enterprise processing thousands of monthly accounts payable trans
 ## 🏗️ Architecture & Component Flow
 
 ```mermaid
-graph TD
-    A[Vendor Invoices PDF / CSV / XLSX] --> C[Data Ingestion Engine]
-    B[Bank Statement CSV / Feed] --> C
-    C --> D[Multi-Stage Reconciliation Engine]
-    D --> E[Flagged Discrepancies & Anomaly Log]
-    E --> F[Agentic Dispute Generator<br/>(Inquiry / Correction / Escalation)]
-    D --> G[Audit Copilot Engine<br/>(Natural Language Ledger Querying)]
-    D --> H[Excel Report Builder openpyxl]
-    D --> I[Streamlit Interactive Cockpit]
+flowchart TD
+    A["Vendor Invoices (PDF / CSV / XLSX)"] --> C["Data Ingestion Engine"]
+    B["Bank Statement (CSV / Feed)"] --> C
+    C --> D["Multi-Stage Reconciliation Engine"]
+    D --> E["Flagged Discrepancies & Anomaly Log"]
+    E --> F["Agentic Dispute Generator<br/>(Inquiry / Correction / Escalation)"]
+    D --> G["Audit Copilot Engine<br/>(Natural Language Ledger Querying)"]
+    D --> H["Excel Report Builder (openpyxl)"]
+    D --> I["Streamlit Interactive Cockpit"]
 ```
 
 ---

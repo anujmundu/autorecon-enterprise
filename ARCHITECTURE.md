@@ -8,39 +8,47 @@
 AutoRecon Enterprise is an autonomous financial operations platform designed to ingest multi-source billing and settlement data, perform deterministic and fuzzy multi-stage reconciliation, identify subtle ledger variances, and autonomously synthesize legally grounded vendor dispute packages.
 
 ```mermaid
-graph TD
-    subgraph Ingestion Layer
-        A1[Commercial Invoices PDF] --> B[DataIngestionEngine]
-        A2[IRS Regulatory Tax Forms PDF] --> B
-        A3[ERP Billing Ledgers CSV/XLSX] --> B
-        A4[Bank Feeds / Settlement CSV] --> B
+flowchart TD
+    subgraph Ingestion["Ingestion Layer"]
+        A1["Commercial Invoices (PDF)"] --> B["DataIngestionEngine"]
+        A2["IRS Regulatory Tax Forms (PDF)"] --> B
+        A3["ERP Billing Ledgers (CSV/XLSX)"] --> B
+        A4["Bank Feeds / Settlement (CSV)"] --> B
     end
 
-    subgraph Normalization & Parsing
-        B --> C1[PyPDF & Regex Entity Extractor]
-        B --> C2[Synonym Column Alias Normalizer]
-        C1 --> D1[Validated InvoiceRecord Models]
-        C2 --> D2[Validated BankTransaction Models]
+    subgraph Normalization["Normalization & Parsing"]
+        B --> C1["PyPDF & Regex Entity Extractor"]
+        B --> C2["Synonym Column Alias Normalizer"]
+        C1 --> D1["Validated InvoiceRecord Models"]
+        C2 --> D2["Validated BankTransaction Models"]
     end
 
-    subgraph Core Matching Engine
-        D1 & D2 --> E[ReconciliationEngine]
-        E --> S1[Stage 1: Duplicate Billing Detector]
-        E --> S2[Stage 2: Exact Reference & Amount Matcher]
-        E --> S3[Stage 3: Token-Sort Fuzzy Vendor Matcher]
-        E --> S4[Stage 4: Residual Variance & Ghost Debit Tracker]
+    subgraph CoreMatching["Core Matching Engine"]
+        D1 --> E["ReconciliationEngine"]
+        D2 --> E
+        E --> S1["Stage 1: Duplicate Billing Detector"]
+        E --> S2["Stage 2: Exact Reference & Amount Matcher"]
+        E --> S3["Stage 3: Token-Sort Fuzzy Vendor Matcher"]
+        E --> S4["Stage 4: Residual Variance & Ghost Debit Tracker"]
     end
 
-    subgraph Audit & Intelligence Layer
-        S1 & S2 & S3 & S4 --> F1[Audit Ledger & AuditSummary]
-        F1 --> G1[AuditCopilotEngine<br/>Conversational Natural Language Interrogation]
-        F1 --> G2[AgenticDisputeGenerator<br/>Inquiry / Correction / Escalation Letters]
-        F1 --> G3[OpenPyXL Boardroom Excel Report Generator]
+    subgraph AuditLayer["Audit & Intelligence Layer"]
+        S1 --> F1["Audit Ledger & AuditSummary"]
+        S2 --> F1
+        S3 --> F1
+        S4 --> F1
+        F1 --> G1["AuditCopilotEngine<br/>(Conversational Natural Language Interrogation)"]
+        F1 --> G2["AgenticDisputeGenerator<br/>(Inquiry / Correction / Escalation Letters)"]
+        F1 --> G3["OpenPyXL Boardroom Excel Report Generator"]
     end
 
-    subgraph Presentation & Client UI
-        G1 & G2 & G3 --> H1[Streamlit Financial Cockpit Port 8501]
-        G1 & G2 & G3 --> H2[CLI Headless Audit Runner]
+    subgraph Presentation["Presentation & Client UI"]
+        G1 --> H1["Streamlit Financial Cockpit (Port 8501)"]
+        G2 --> H1
+        G3 --> H1
+        G1 --> H2["CLI Headless Audit Runner"]
+        G2 --> H2
+        G3 --> H2
     end
 ```
 
