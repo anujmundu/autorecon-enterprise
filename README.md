@@ -126,3 +126,17 @@ python -m src.cli --invoices demo_samples/01_invoices_sample.csv --bank demo_sam
 ```bash
 pytest tests/ -v
 ```
+
+---
+
+## 🧑‍💻 Author & Contact
+
+**Anuj Mundu**  
+*Senior Python Developer | FinTech Automation & Data Integration Engineer*  
+
+- **GitHub:** [@anujmundu](https://github.com/anujmundu)
+- **Repository:** [autorecon-enterprise](https://github.com/anujmundu/autorecon-enterprise)
+- **Email:** [anujmark.edwin.ame@gmail.com](mailto:anujmark.edwin.ame@gmail.com)
+
+⭐ *Contributions, issues, and feature requests are welcome! Feel free to star this repository if you find it valuable.*
+
