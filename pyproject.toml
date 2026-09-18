@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "autorecon-enterprise"
+version = "1.0.0"
+description = "Autonomous Financial Reconciliation, Anomaly Detection & Agentic Vendor Dispute Platform"
+readme = "README.md"
+authors = [{ name = "Anuj" }]
+license = { text = "MIT" }
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Office/Business :: Financial :: Accounting",
+]
+dependencies = [
+    "pandas>=2.1.0",
+    "openpyxl>=3.1.2",
+    "thefuzz>=0.22.1",
+    "pydantic>=2.5.0",
+    "rich>=13.7.0",
+    "streamlit>=1.31.0",
+    "pypdf>=4.0.0",
+    "pytest>=8.0.0",
+]
+
+[project.scripts]
+autorecon = "src.cli:main"
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+addopts = "-ra -q --import-mode=importlib"
+testpaths = ["tests"]
+pythonpath = ["."]
