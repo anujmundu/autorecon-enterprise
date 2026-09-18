@@ -1,0 +1,13 @@
+invoice_id,vendor_name,invoice_date,due_date,subtotal,tax_amount,total_amount,currency,category
+INV-2026-001,Amazon Web Services Inc,2026-02-01,2026-03-01,3420.00,273.60,3693.60,USD,Cloud Infrastructure
+INV-2026-002,Google Cloud Platform,2026-02-03,2026-03-03,1850.00,148.00,1998.00,USD,Cloud Infrastructure
+INV-2026-003,Twilio Communication API,2026-02-05,2026-03-05,620.40,49.63,670.03,USD,Communications
+INV-2026-004,Slack Technologies LLC,2026-02-06,2026-03-06,1200.00,0.00,1200.00,USD,Software Subscriptions
+INV-2026-005,Figma Enterprise Design,2026-02-08,2026-03-08,750.00,60.00,810.00,USD,Design Software
+INV-2026-006,Datadog Observability,2026-02-10,2026-03-10,2100.00,168.00,2268.00,USD,DevOps & Monitoring
+INV-2026-007,GitHub Enterprise Copilot,2026-02-11,2026-03-11,840.00,67.20,907.20,USD,Developer Tools
+INV-2026-008,Stripe Processing Surcharge,2026-02-12,2026-03-12,415.50,0.00,415.50,USD,Payment Gateway
+INV-2026-009,WeWork Shared Office Space,2026-02-14,2026-03-14,3500.00,280.00,3780.00,USD,Facilities & Rent
+INV-2026-010,WeWork Shared Office Space,2026-02-14,2026-03-14,3500.00,280.00,3780.00,USD,Facilities & Rent
+INV-2026-011,Snowflake Data Cloud,2026-02-16,2026-03-16,4200.00,336.00,4536.00,USD,Data Engineering
+INV-2026-012,OpenAI API Tier 4,2026-02-18,2026-03-18,1500.00,0.00,1500.00,USD,AI Compute
