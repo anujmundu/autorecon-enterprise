@@ -1,10 +1,12 @@
 # AutoRecon Agentic™ (2026 Edition)
 ### Autonomous Financial Reconciliation, Dispute Generation & Conversational Audit Copilot
 
-[![CI Pipeline](https://img.shields.io/badge/CI%20Pipeline-5%2F5%20Passing-success?style=for-the-badge&logo=github-actions)](https://github.com)
+[![CI Pipeline](https://img.shields.io/badge/CI%20Pipeline-5%2F5%20Passing-success?style=for-the-badge&logo=github-actions)](https://github.com/anujmundu/autorecon-enterprise/actions)
+[![Streamlit Cloud](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/deploy?repository=anujmundu%2Fautorecon-enterprise&branch=main&main_file=streamlit_app.py)
 [![Python Version](https://img.shields.io/badge/Python-3.10%20%7C%203.11%20%7C%203.12-blue?style=for-the-badge&logo=python)](https://www.python.org/)
 [![Type Checking](https://img.shields.io/badge/Type%20Validation-Pydantic%20v2-orange?style=for-the-badge&logo=pydantic)](https://pydantic.dev/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
+
 
 > **Role Fit:** Python Developer | FinTech Automation Engineer | Data Integration Specialist  
 > **Key Tech Stack:** Python 3.11+, Pandas, PyPDF, OpenPyXL, TheFuzz, Rich, Streamlit, Pydantic v2.  
